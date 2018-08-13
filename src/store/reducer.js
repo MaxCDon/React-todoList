@@ -7,6 +7,7 @@ const defaultState = {
 }
 
 //reducer可以接受state,但是绝对不能修改state
+//纯函数指的是，给固定的输入，就一定会有固定的输出，而且不会有任何副作用
 export default (state = defaultState, action) => {
     if(action.type === CHANGE_INPUT_VALUE){
         const newState = JSON.parse(JSON.stringify(state));
